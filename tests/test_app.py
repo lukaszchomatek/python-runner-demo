@@ -6,7 +6,7 @@ def test_github_route():
     response = client.get("/github")
 
     # 1. HTTP 状态码应该是 200
-    assert response.status_code == 200
+    assert response.status_code == 500
 
     # 2. 返回内容应包含 "Hello, GitHub Actions"
     assert b"Hello, GitHub Actions" in response.data
